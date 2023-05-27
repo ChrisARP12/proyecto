@@ -11,11 +11,12 @@
         android:id="@+id/imglogologin"
         android:layout_width="213dp"
         android:layout_height="154dp"
-        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
         app:srcCompat="@drawable/logo" />
 
     <EditText
@@ -31,16 +32,19 @@
         android:hint="@string/email"
         android:inputType="text"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imglogologin" />
+        app:layout_constraintTop_toBottomOf="@+id/imglogologin"
+        app:layout_constraintVertical_bias="0.002" />
 
     <EditText
         android:id="@+id/etpasswordlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         android:drawableStart="@drawable/password"
         android:ems="10"
@@ -48,41 +52,46 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etlogologin" />
+        app:layout_constraintTop_toBottomOf="@+id/etlogologin"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/bloginlogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:id="@+id/btnIniciar"
+        android:layout_width="338dp"
+        android:layout_height="66dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
         android:background="@drawable/button_rounded"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/login"
+        android:text="Iniciar sesión"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpasswordlogin" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpasswordlogin"
+        app:layout_constraintVertical_bias="0.407">
+
+    </Button>
 
     <Button
-        android:id="@+id/bregistrologin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:id="@+id/btnRegistro"
+        android:layout_width="352dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/button_rounded_border"
         android:fontFamily="sans-serif-condensed-medium"
-        android:onClick="Siguiente"
-        android:text="@string/registrarse"
+        android:text="Registro"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bloginlogin" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551"></Button>
 
     <ImageButton
         android:id="@+id/imgbtnfacebooklogin"
@@ -91,11 +100,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_social"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bregistrologin"
         app:srcCompat="@drawable/facebook" />
 
     <ImageButton
@@ -105,12 +116,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_social"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgbtnfacebooklogin"
-        app:layout_constraintTop_toBottomOf="@+id/bregistrologin"
         app:srcCompat="@drawable/twitter" />
 
     <ImageButton
@@ -120,12 +132,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/button_social"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imgbtnfacebooklogin"
-        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bregistrologin"
         app:srcCompat="@drawable/google" />
 
     <TextView

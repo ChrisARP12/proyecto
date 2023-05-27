@@ -6,145 +6,39 @@
     android:layout_height="match_parent"
     android:background="#dab78d"
     android:orientation="vertical"
-    tools:context=".VistaUnoUsuarioActivity">
+    tools:context="VistaUnoUsuarioActivity">
 
-    <ScrollView
-        android:layout_width="417dp"
-        android:layout_height="686dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+    <ImageView
+        android:id="@+id/imglogologin"
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo"
+        tools:layout_conversion_absoluteHeight="152dp"
+        tools:layout_conversion_absoluteWidth="417dp" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imglogologin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo"
-                tools:layout_conversion_absoluteHeight="152dp"
-                tools:layout_conversion_absoluteWidth="417dp"
-                tools:layout_editor_absoluteX="-2dp"
-                tools:layout_editor_absoluteY="32dp" />
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_conversion_absoluteHeight="471dp"
-                tools:layout_conversion_absoluteWidth="417dp"
-                tools:layout_editor_absoluteX="-2dp"
-                tools:layout_editor_absoluteY="208dp">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton7"
-                        android:layout_width="230dp"
-                        android:layout_height="230dp"
-                        app:srcCompat="@drawable/cafeteria_seis"
-                        tools:layout_conversion_absoluteHeight="214dp"
-                        tools:layout_conversion_absoluteWidth="100dp"
-                        tools:layout_editor_absoluteX="573dp"
-                        tools:layout_editor_absoluteY="332dp" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:text="@string/noticias"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        tools:layout_conversion_absoluteHeight="24dp"
-                        tools:layout_conversion_absoluteWidth="58dp"
-                        tools:layout_editor_absoluteX="26dp"
-                        tools:layout_editor_absoluteY="16dp" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:text="@string/promociones"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        tools:layout_conversion_absoluteHeight="24dp"
-                        tools:layout_conversion_absoluteWidth="58dp"
-                        tools:layout_editor_absoluteX="26dp"
-                        tools:layout_editor_absoluteY="297dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="230dp"
-                        android:layout_height="230dp"
-                        app:srcCompat="@drawable/cafeteria_tres"
-                        tools:layout_conversion_absoluteHeight="214dp"
-                        tools:layout_conversion_absoluteWidth="100dp"
-                        tools:layout_editor_absoluteX="567dp"
-                        tools:layout_editor_absoluteY="48dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="230dp"
-                        android:layout_height="230dp"
-                        app:srcCompat="@drawable/cafeteria_dos"
-                        tools:layout_conversion_absoluteHeight="214dp"
-                        tools:layout_conversion_absoluteWidth="100dp"
-                        tools:layout_editor_absoluteX="298dp"
-                        tools:layout_editor_absoluteY="48dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="230dp"
-                        android:layout_height="230dp"
-                        app:srcCompat="@drawable/cafeteria_uno"
-                        tools:layout_conversion_absoluteHeight="214dp"
-                        tools:layout_conversion_absoluteWidth="100dp"
-                        tools:layout_editor_absoluteX="26dp"
-                        tools:layout_editor_absoluteY="48dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="230dp"
-                        android:layout_height="230dp"
-                        app:srcCompat="@drawable/cafeteria_cuatro"
-                        tools:layout_conversion_absoluteHeight="214dp"
-                        tools:layout_conversion_absoluteWidth="100dp"
-                        tools:layout_editor_absoluteX="26dp"
-                        tools:layout_editor_absoluteY="332dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="230dp"
-                        android:layout_height="230dp"
-                        app:srcCompat="@drawable/cafeteria_cinco"
-                        tools:layout_conversion_absoluteHeight="214dp"
-                        tools:layout_conversion_absoluteWidth="100dp"
-                        tools:layout_editor_absoluteX="298dp"
-                        tools:layout_editor_absoluteY="330dp" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
-
-        </LinearLayout>
-
-
-    </ScrollView>
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="386dp"
+        android:layout_height="29dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331"
+        tools:layout_conversion_absoluteHeight="24dp"
+        tools:layout_conversion_absoluteWidth="58dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomNavigationView"
@@ -160,46 +54,29 @@
             android:id="@+id/tvperfilvistauno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:text="@string/perfil"
             android:textColor="#000000"
             android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.813"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/tvpromovistauno"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:text="@string/promos"
-            android:textColor="#000000"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.584"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            tools:layout_editor_absoluteX="302dp"
+            tools:layout_editor_absoluteY="31dp" />
 
         <TextView
             android:id="@+id/tvpedidovistauno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
             android:text="@string/pedido"
             android:textColor="#000000"
             android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.374"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteY="30dp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnordenvistauno"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/comida"
+            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteY="2dp" />
 
         <TextView
             android:id="@+id/tviniciovistauno"
@@ -215,33 +92,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-
-        <ImageButton
-            android:id="@+id/imgbtnpromosvistauno"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="3dp"
-            android:background="@mipmap/promocion"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.064"
-            app:layout_constraintStart_toEndOf="@+id/imgbtnordenvistauno"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageButton
-            android:id="@+id/imgbtnordenvistauno"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="41dp"
-            android:background="@mipmap/comida"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.062"
-            app:layout_constraintStart_toEndOf="@+id/imgbtncasavistauno"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.133" />
 
         <ImageButton
             android:id="@+id/imgbtncasavistauno"
@@ -262,13 +112,23 @@
             android:layout_height="30dp"
             android:layout_marginTop="3dp"
             android:background="@mipmap/usuario"
+            android:onClick="VistaUsuario"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toEndOf="@+id/imgbtnpromosvistauno"
+            app:layout_constraintStart_toEndOf="@+id/imgbtnordenvistauno"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_lis_productos_uno"
+        android:layout_width="399dp"
+        android:layout_height="392dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.793" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,8 +8,8 @@
     tools:context=".PerfilActivity">
 
     <ScrollView
-        android:layout_width="417dp"
-        android:layout_height="686dp"
+        android:layout_width="398dp"
+        android:layout_height="689dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,13 +46,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/btnEditarFotoUsuarioPerfil"
+                android:id="@+id/btnGuardar"
                 android:layout_width="277dp"
                 android:layout_height="49dp"
                 android:layout_marginTop="28dp"
                 android:background="@drawable/button_rounded"
                 android:backgroundTint="#705C54"
                 android:drawableStart="@drawable/lapiz"
+                android:onClick="onclick"
                 android:text="@string/editarFotoPerfil"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +71,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.258"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnEditarFotoUsuarioPerfil" />
+                app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
 
             <EditText
                 android:id="@+id/etNombreUsuarioPerfil"
@@ -167,6 +168,7 @@
                 android:layout_marginTop="28dp"
                 android:background="@drawable/button_rounded"
                 android:backgroundTint="#705C54"
+                android:onClick="guardar"
                 android:text="@string/guardar"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -180,6 +182,7 @@
                 android:layout_marginTop="28dp"
                 android:background="@drawable/button_rounded"
                 android:backgroundTint="#A82020"
+                android:onClick="cerrarSesion"
                 android:text="@string/cerrarsesion"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -204,46 +207,29 @@
             android:id="@+id/tvperfilvistauno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:text="@string/perfil"
             android:textColor="#000000"
             android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.813"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/tvpromovistauno"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:text="@string/promos"
-            android:textColor="#000000"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.584"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            tools:layout_editor_absoluteX="302dp"
+            tools:layout_editor_absoluteY="31dp" />
 
         <TextView
             android:id="@+id/tvpedidovistauno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
             android:text="@string/pedido"
             android:textColor="#000000"
             android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.374"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteY="30dp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnordenvistauno"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/comida"
+            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteY="2dp" />
 
         <TextView
             android:id="@+id/tviniciovistauno"
@@ -261,38 +247,12 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <ImageButton
-            android:id="@+id/imgbtnpromosvistauno"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="3dp"
-            android:background="@mipmap/promocion"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.064"
-            app:layout_constraintStart_toEndOf="@+id/imgbtnordenvistauno"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageButton
-            android:id="@+id/imgbtnordenvistauno"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="41dp"
-            android:background="@mipmap/comida"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.062"
-            app:layout_constraintStart_toEndOf="@+id/imgbtncasavistauno"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.133" />
-
-        <ImageButton
             android:id="@+id/imgbtncasavistauno"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="3dp"
             android:background="@mipmap/casa"
+            android:onClick="volver"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.152"
@@ -306,10 +266,10 @@
             android:layout_height="30dp"
             android:layout_marginTop="3dp"
             android:background="@mipmap/usuario"
+            android:onClick="VistaUsuario"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toEndOf="@+id/imgbtnpromosvistauno"
+            app:layout_constraintStart_toEndOf="@+id/imgbtnordenvistauno"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 

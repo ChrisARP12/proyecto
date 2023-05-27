@@ -1,9 +1,5 @@
 package com.example.proyecto;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,39 +8,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
-public class VistaUnoUsuarioActivity extends AppCompatActivity {
-    private TextView Bienvenida;
-    public String id;
-
+public class AdminActivity extends AppCompatActivity {
+    private TextView bienvenida;
     ArrayList<Producto> listaProducto;
     RecyclerView recyclerViewProductos;
     AdminSQLiteOpenHelper conn;
 
     @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vista_uno_usuario);
-        //Inicializando valores
-        Bienvenida = (TextView) findViewById(R.id.txtBienvenida);
+        setContentView(R.layout.activity_admin);
 
-        //Recibir Datos del Login
-        id = getIntent().getStringExtra("id");
-
-        //Buscando en la base de datos a nuestro usuario
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-        Cursor file =  BaseDeDatos.rawQuery("select nombre from usuarios where id="+id,null);
-        String nombreUsuario = file.getString(0);
-        BaseDeDatos.close();
-        Bienvenida.setText("Bienvenido "+nombreUsuario);
+        //Mensaje de bienvenida al admin
+        bienvenida = (TextView) findViewById(R.id.txtBienvenida);
+        bienvenida.setText("Bienvenido Admin, aquí podras modificar tus productos");
 
         conn = new AdminSQLiteOpenHelper(getApplicationContext(),"administracion",null, 1);
         listaProducto=new ArrayList<>();
 
-        recyclerViewProductos= (RecyclerView) findViewById(R.id.activity_lis_productos_uno);
+        recyclerViewProductos= (RecyclerView) findViewById(R.id.activity_list_productos);
         recyclerViewProductos.setLayoutManager(new LinearLayoutManager(this));
 
         consultarListaProductos();
@@ -52,10 +41,7 @@ public class VistaUnoUsuarioActivity extends AppCompatActivity {
         ListaProductosAdapter adapter=new ListaProductosAdapter(listaProducto);
         recyclerViewProductos.setAdapter(adapter);
 
-
-
     }
-
     private void consultarListaProductos() {
         SQLiteDatabase db = conn.getReadableDatabase();
 
@@ -74,11 +60,8 @@ public class VistaUnoUsuarioActivity extends AppCompatActivity {
             listaProducto.add(producto);
         }
     }
-
-    //Metodo para pasar al perfil de usuario
-    public void VistaUsuario(View view){
-        Intent i = new Intent(this, PerfilActivity.class);
-        i.putExtra("id",id);
+    public void cerrarSesion(View view){
+        Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
     }
 }
